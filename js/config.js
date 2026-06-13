@@ -5,8 +5,8 @@
 
 // ── WhatsApp Configuration ───────────────────────────────
 // REPLACE: Your WhatsApp number with country code, no + or spaces
-// India example: 91 + 10-digit number → '918943045800'
-export const WHATSAPP_NUMBER = '918943045800';
+// India example: 91 + 10-digit number → '919388888837'
+export const WHATSAPP_NUMBER = '919388888837';
 
 // Raw message strings — DO NOT pre-encode these; waLink() encodes them
 export const WHATSAPP_MESSAGES = {
@@ -33,7 +33,7 @@ export const BUSINESS = {
     name: 'Tiny Treasures by MJ',
     tagline: 'Tiny Creations. Endless Joy.',
     email: 'hello@tinytreasuresbymj.com',
-    phone: '+91 8943045800',
+    phone: '+91 9388888837',
     hours: 'Mon–Sat: 10am – 7pm IST',
     address: 'Available Online & by Appointment',
 };
