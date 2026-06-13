@@ -4,17 +4,20 @@
    ============================================================ */
 
 // ── WhatsApp Configuration ───────────────────────────────
-// REPLACE: Update with your actual WhatsApp number (with country code, no +)
-export const WHATSAPP_NUMBER = '8943045800';
+// REPLACE: Your WhatsApp number with country code, no + or spaces
+// India example: 91 + 10-digit number → '918943045800'
+export const WHATSAPP_NUMBER = '918943045800';
 
+// Raw message strings — DO NOT pre-encode these; waLink() encodes them
 export const WHATSAPP_MESSAGES = {
-    order: encodeURIComponent('Hello Tiny Treasures by MJ! I would like to enquire about placing an order for a custom miniature piece. Could you please share the details, pricing and lead time?'),
-    question: encodeURIComponent('Hello Tiny Treasures by MJ! I have a question about your handcrafted miniature pieces. Could you please help me?'),
-    workshop: encodeURIComponent('Hello! I am interested in booking a workshop at Tiny Treasures by MJ. Could you please share the upcoming dates, details, and pricing?'),
+    order: 'Hello Tiny Treasures by MJ! I would like to enquire about placing an order for a custom miniature piece. Could you please share the details, pricing and lead time?',
+    question: 'Hello Tiny Treasures by MJ! I have a question about your handcrafted miniature pieces. Could you please help me?',
+    workshop: 'Hello! I am interested in booking a workshop at Tiny Treasures by MJ. Could you please share the upcoming dates, details, and pricing?',
 };
 
 export function waLink(type) {
-    return `https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGES[type] || WHATSAPP_MESSAGES.question}`;
+    const msg = WHATSAPP_MESSAGES[type] || WHATSAPP_MESSAGES.question;
+    return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
 }
 
 // ── Social Links ─────────────────────────────────────────
@@ -30,7 +33,7 @@ export const BUSINESS = {
     name: 'Tiny Treasures by MJ',
     tagline: 'Tiny Creations. Endless Joy.',
     email: 'hello@tinytreasuresbymj.com',
-    phone: '+91 99999 99999',
+    phone: '+91 8943045800',
     hours: 'Mon–Sat: 10am – 7pm IST',
     address: 'Available Online & by Appointment',
 };
