@@ -311,6 +311,52 @@
     </div>
   </div>
 </section>
+<!-- ════════════════════════════════════════════════════════
+     4b. 3D SPINNING WHEEL SHOWCASE
+     ════════════════════════════════════════════════════════ -->
+<section class="wheel-section" id="showcase" aria-labelledby="wheel-heading">
+  <div class="wheel-bg-blur" aria-hidden="true"></div>
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="label-tag" style="color:var(--blush-200)">✦ Our Collection</span>
+      <h2 class="text-heading-xl" id="wheel-heading" style="color:#fff">
+        Spin Through <em style="font-style:italic;color:var(--blush-300)">Every Treasure</em>
+      </h2>
+      <p style="color:rgba(253,248,245,0.65)">
+        Rotate the wheel to explore. Click any piece to see it up close.
+      </p>
+    </div>
+  </div>
+ 
+  <div class="wheel-stage" id="wheel-stage" aria-label="3D product showcase wheel">
+    <div class="wheel-center-text" aria-hidden="true">
+      <span class="wheel-center-label">Tiny</span>
+      <span class="wheel-center-brand">Treasures</span>
+      <span class="wheel-center-sub">by MJ</span>
+    </div>
+    <div class="wheel-ring" id="wheel-ring"></div>
+  </div>
+ 
+  <div class="wheel-lightbox" id="wheel-lightbox" role="dialog" aria-modal="true" aria-label="Product close-up">
+    <div class="wheel-lightbox-backdrop" id="wheel-lb-backdrop"></div>
+    <div class="wheel-lightbox-box" id="wheel-lb-box">
+      <button class="wheel-lb-close" id="wheel-lb-close" aria-label="Close">✕</button>
+      <img class="wheel-lb-img" id="wheel-lb-img" src="" alt="">
+      <div class="wheel-lb-info">
+        <div class="wheel-lb-category" id="wheel-lb-cat"></div>
+        <div class="wheel-lb-name" id="wheel-lb-name"></div>
+        <div class="wheel-lb-desc" id="wheel-lb-desc"></div>
+        <button class="btn btn-primary" id="wheel-lb-enquire">Enquire on WhatsApp</button>
+      </div>
+    </div>
+  </div>
+ 
+  <div class="wheel-hint reveal" aria-hidden="true">
+    <span class="wheel-hint-icon">⟳</span> Drag or use arrows to spin &nbsp;
+    <span class="wheel-hint-keys">← →</span>
+  </div>
+</section>
+ 
 
 <!-- ════════════════════════════════════════════════════════
      5. TESTIMONIALS
@@ -347,32 +393,7 @@
       </div>
     </div>
   </div>
-</section>
-
-<!-- ════════════════════════════════════════════════════════
-     6. WORKSHOPS & EVENTS
-     ════════════════════════════════════════════════════════ -->
-<section class="workshops-section section" id="workshops" aria-labelledby="workshops-heading">
-  <div class="container">
-    <div class="section-header reveal">
-      <span class="label-tag">✦ Learn & Create</span>
-      <h2 class="text-heading-xl" id="workshops-heading">
-        Upcoming Workshops
-      </h2>
-      <p>Join MJ in a warm, creative studio session and discover the joy of bringing tiny worlds to life with your own hands.</p>
-    </div>
-
-    <!-- Workshop cards rendered by JS -->
-    <div class="workshops-grid" id="workshops-grid" role="list" aria-label="Upcoming workshops"></div>
-
-    <div style="text-align:center;margin-top:3rem" class="reveal">
-      <button class="btn btn-secondary btn-lg" data-wa="workshop" aria-label="Ask about more workshops on WhatsApp">
-        Ask About More Dates
-      </button>
-    </div>
-  </div>
-</section>
-
+</section> 
 <!-- ════════════════════════════════════════════════════════
      7. WHATSAPP CTA SECTION
      ════════════════════════════════════════════════════════ -->
@@ -530,10 +551,10 @@
 <footer class="footer" id="footer" role="contentinfo">
   <div class="container">
     <div class="footer-grid">
-
+ 
       <!-- Brand column -->
       <div>
-        <img src="assets/logo.png" alt="Tiny Treasures by MJ" class="footer-brand-logo"
+        <img src="assets/logo.jpg" alt="Tiny Treasures by MJ" class="footer-brand-logo"
              width="52" height="52">
         <div class="footer-brand-name">Tiny Treasures by MJ</div>
         <p class="footer-brand-desc">
@@ -549,7 +570,7 @@
                   aria-label="WhatsApp">WhatsApp</button>
         </div>
       </div>
-
+ 
       <!-- Collections -->
       <div>
         <div class="footer-col-title">Collections</div>
@@ -561,19 +582,19 @@
           <li><a href="#collections">Custom Orders</a></li>
         </ul>
       </div>
-
-      <!-- Workshops -->
+ 
+      <!-- Explore -->
       <div>
-        <div class="footer-col-title">Workshops</div>
+        <div class="footer-col-title">Explore</div>
         <ul class="footer-links" role="list">
-          <li><a href="#workshops">Beginner Clay</a></li>
-          <li><a href="#workshops">Room Box Workshop</a></li>
-          <li><a href="#workshops">Wedding Toppers</a></li>
-          <li><a href="#workshops">Kids Sessions</a></li>
-          <li><a href="#workshops">Corporate Events</a></li>
+          <li><a href="#collections">Collections</a></li>
+          <li><a href="#showcase">3D Showcase</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#process">Our Process</a></li>
+          <li><a href="#faq">FAQ</a></li>
         </ul>
       </div>
-
+ 
       <!-- Info -->
       <div>
         <div class="footer-col-title">Info</div>
@@ -584,9 +605,9 @@
           <li><a href="https://www.instagram.com/tinytreasuresbymj_/" target="_blank" rel="noopener">Instagram</a></li>
         </ul>
       </div>
-
+ 
     </div>
-
+ 
     <div class="footer-bottom">
       <p class="footer-copy">
         © 2026 Tiny Treasures by MJ. Crafted with Love ·
@@ -600,75 +621,6 @@
     </div>
   </div>
 </footer>
-
-<!-- ════════════════════════════════════════════════════════
-     BOOKING MODAL
-     ════════════════════════════════════════════════════════ -->
-<div class="modal-overlay" id="booking-modal" role="dialog" aria-modal="true"
-     aria-labelledby="modal-title" aria-describedby="modal-desc">
-  <div class="modal-box">
-    <button class="modal-close" id="modal-close" aria-label="Close booking form">✕</button>
-    <h2 class="modal-title" id="modal-title">Reserve Your Spot</h2>
-    <p class="modal-subtitle" id="modal-desc">
-      Fill in your details and we'll confirm your booking via WhatsApp within a few hours.
-    </p>
-
-    <form id="booking-form" novalidate aria-label="Workshop booking form">
-      <div class="form-grid">
-        <div class="form-group">
-          <label class="form-label" for="booking-name">Full Name *</label>
-          <input class="form-input" type="text" id="booking-name" name="name"
-                 placeholder="Your name" required autocomplete="name" aria-required="true">
-        </div>
-        <div class="form-group">
-          <label class="form-label" for="booking-phone">Phone / WhatsApp *</label>
-          <input class="form-input" type="tel" id="booking-phone" name="phone"
-                 placeholder="+91 00000 00000" required autocomplete="tel" aria-required="true">
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label class="form-label" for="booking-email">Email Address *</label>
-        <input class="form-input" type="email" id="booking-email" name="email"
-               placeholder="hello@email.com" required autocomplete="email" aria-required="true">
-      </div>
-
-      <div class="form-group">
-        <label class="form-label" for="booking-workshop">Select Workshop *</label>
-        <select class="form-select" id="booking-workshop" name="workshop" required aria-required="true">
-          <option value="">Choose a workshop…</option>
-        </select>
-      </div>
-
-      <div class="form-grid">
-        <div class="form-group">
-          <label class="form-label" for="booking-participants">No. of Participants</label>
-          <select class="form-select" id="booking-participants" name="participants">
-            <option value="1">1 person</option>
-            <option value="2">2 people</option>
-            <option value="3">3 people</option>
-            <option value="4">4 people</option>
-            <option value="5+">5+ people (group)</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label class="form-label" for="booking-notes">Special Notes</label>
-          <input class="form-input" type="text" id="booking-notes" name="notes"
-                 placeholder="Any accessibility needs, questions…">
-        </div>
-      </div>
-
-      <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;margin-top:0.5rem"
-              aria-label="Confirm booking via WhatsApp">
-        Confirm via WhatsApp
-      </button>
-
-      <p style="text-align:center;font-size:0.75rem;color:var(--text-muted);margin-top:1rem">
-        Clicking above will open WhatsApp with your booking details pre-filled.
-      </p>
-    </form>
-  </div>
-</div>
 
 <!-- ════════════════════════════════════════════════════════
      WHATSAPP FAB

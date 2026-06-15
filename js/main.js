@@ -3,20 +3,19 @@
    Init, scroll observer, parallax, nav, progress bar
    ============================================================ */
 
-import { PRODUCTS, TESTIMONIALS, FAQS, waLink, SOCIAL, BUSINESS, PROCESS_STAGES, WORKSHOPS, GALLERY } from './config.js';
+import { PRODUCTS, TESTIMONIALS, FAQS, waLink, SOCIAL, BUSINESS, PROCESS_STAGES, GALLERY } from './config.js';
 import { initGallery } from './gallery.js';
 import { initProcess } from './process.js';
-import { initBooking } from './booking.js';
+import { initWheel } from './wheel.js';
 
 // ── DOM Ready ────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
     renderProducts();
     renderTestimonials();
     renderFAQ();
-    renderWorkshops();
     initProcess(PROCESS_STAGES);
     initGallery(GALLERY);
-    initBooking(WORKSHOPS);
+    initWheel();
     initNav();
     initScrollReveal();
     initProgressBar();
@@ -117,48 +116,6 @@ function toggleFAQ(item, btn) {
         item.classList.add('open');
         btn.setAttribute('aria-expanded', 'true');
     }
-}
-
-// ── Render Workshops ──────────────────────────────────────
-function renderWorkshops() {
-    const grid = document.getElementById('workshops-grid');
-    if (!grid) return;
-
-    WORKSHOPS.forEach((w, i) => {
-        const pct = Math.round(((w.seats - w.seatsLeft) / w.seats) * 100);
-        const card = document.createElement('div');
-        card.className = `workshop-card reveal delay-${i + 1}`;
-        card.innerHTML = `
-      <div class="workshop-img">
-        <span style="position:relative;z-index:1">${w.icon || ''}</span>
-      </div>
-      <div class="workshop-body">
-        <div class="workshop-date">Date: ${w.date}</div>
-        <h3 class="workshop-title">${w.title}</h3>
-        <p style="font-size:0.875rem;color:var(--text-secondary);margin-bottom:1rem;line-height:1.6">${w.description}</p>
-        <div class="workshop-meta">
-          <div class="workshop-meta-row"><span>Duration:</span><span>${w.duration}</span></div>
-          <div class="workshop-meta-row"><span>Age:</span><span>${w.age}</span></div>
-          <div class="workshop-meta-row"><span>Availability:</span><span>${w.seatsLeft} of ${w.seats} seats left</span></div>
-        </div>
-        <div style="margin-bottom:1.25rem">
-          <div style="height:4px;background:var(--blush-100);border-radius:4px;overflow:hidden">
-            <div style="height:100%;width:${pct}%;background:var(--terracotta);border-radius:4px;transition:width 1s var(--ease-out)"></div>
-          </div>
-        </div>
-        <div class="workshop-footer">
-          <div>
-            <div class="workshop-price">${w.price}</div>
-            <div class="workshop-seats">per person</div>
-          </div>
-          <button class="btn btn-primary" onclick="window.dispatchEvent(new CustomEvent('openBooking', {detail: ${w.id}}))" aria-label="Reserve a spot in ${w.title}">
-            Reserve Your Spot
-          </button>
-        </div>
-      </div>
-    `;
-        grid.appendChild(card);
-    });
 }
 
 // ── Navigation ────────────────────────────────────────────
@@ -326,4 +283,4 @@ export function showToast(message, type = 'default') {
         toast.style.animation = 'fadeUp 0.3s var(--ease-spring) reverse';
         setTimeout(() => toast.remove(), 300);
     }, 3500);
-}
+} 
