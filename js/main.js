@@ -13,8 +13,8 @@ document.addEventListener('DOMContentLoaded', () => {
     renderProducts();
     renderTestimonials();
     renderFAQ();
-    initProcess(PROCESS_STAGES);
-    initGallery(GALLERY);
+    //initProcess(PROCESS_STAGES);
+    //initGallery(GALLERY);
    // initWheel();
     initNav();
     initScrollReveal();
