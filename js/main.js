@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     renderFAQ();
     initProcess(PROCESS_STAGES);
     initGallery(GALLERY);
-    initWheel();
+   // initWheel();
     initNav();
     initScrollReveal();
     initProgressBar();
