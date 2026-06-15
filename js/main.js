@@ -6,16 +6,16 @@
 import { PRODUCTS, TESTIMONIALS, FAQS, waLink, SOCIAL, BUSINESS, PROCESS_STAGES, GALLERY } from './config.js';
 import { initGallery } from './gallery.js';
 import { initProcess } from './process.js';
-import { initWheel } from './wheel.js';
+import { initWheel } from './Wheel.js';
 
 // ── DOM Ready ────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
     renderProducts();
     renderTestimonials();
     renderFAQ();
-    //initProcess(PROCESS_STAGES);
-    //initGallery(GALLERY);
-   // initWheel();
+    initProcess(PROCESS_STAGES);
+    initGallery(GALLERY);
+    initWheel();
     initNav();
     initScrollReveal();
     initProgressBar();
